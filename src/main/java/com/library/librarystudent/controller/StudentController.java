@@ -19,14 +19,8 @@ public class StudentController {
     @GetMapping("getstudent/{Id}")
     public ResponseEntity<StudentOutPut> getStudentDetails(@PathVariable Integer Id){
 
-        StudentOutPut studentOutPut= studentService.getStudentDetails(Id);
-        if(studentOutPut!=null){
-            System.out.println("data pulled!");
-            return ResponseEntity.ok(studentOutPut);
-        }else{
-            System.out.println("No data pulled!");
-            return ResponseEntity.notFound().build();
-        }
+    StudentOutPut studentOutPut = studentService.getStudentDetails(Id);
+        return ResponseEntity.ok(studentOutPut);
 
     }
 

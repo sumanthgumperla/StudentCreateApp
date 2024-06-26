@@ -19,7 +19,7 @@ public class KafkaConsumer {
     @Autowired
    StudentService studentService;
 
-    @KafkaListener(topics = "myFirstTopic",groupId = "library")
+//    @KafkaListener(topics = "myFirstTopic",groupId = "library")
     public void consumer(ConsumerRecord<String,String> record){
       String payloadData= record.value();
 
